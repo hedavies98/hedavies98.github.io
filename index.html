@@ -6,7 +6,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <style>
-    span::first-letter {text-transform:capitalize;}
+    span{text-transform:capitalize;}
   </style>
 </head>
 <body>
@@ -23,7 +23,7 @@
     $.get( "./nouns", function( data ) {
       var blines = data.split('\n');
       blines.splice(0,y);
-      var bfin = alines.join('\n');
+      var bfin = blines.join('\n');
       $("#b").html(bfin.substring(0,bfin.indexOf('\n')));
     });
   </script>
