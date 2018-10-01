@@ -13,12 +13,12 @@
     $.get( "./adj", function( data ) {
       var alines = data.split('\n');
       alines.splice(0,x);
-      $("#a").html(alines.join('\n'));
+      $("#a").html(alines.join('\n').substring(0,indexOf('\n')));
     });
     $.get( "./nouns", function( data ) {
       var blines = data.split('\n');
       blines.splice(0,y);
-      $("#b").html(blines.join('\n'));
+      $("#b").html(blines.join('\n').substring(0,indexOf('\n'));
     });
   </script>
 <h1>Hello World</h1>
