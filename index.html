@@ -17,7 +17,7 @@
       var alines = data.split('\n');
       alines.splice(0,x);
       var afin = alines.join('\n');
-      $("#a").html(afin.substring(0,afin.indexOf('\n')););
+      $("#a").html(afin.substring(0,afin.indexOf('\n')));
     });
     $.get( "./nouns", function( data ) {
       var blines = data.split('\n').splice(0,y);
