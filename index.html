@@ -5,18 +5,17 @@
 </head>
 <body>
   <script>
-    var x = Math.floor((Math.random() * 906));
-    var y = Math.floor((Math.random() * 8976));
-    $.get( "./adj", function( data ) {
-      var alines = data.split('\n');
+    var x=Math.floor((Math.random()*906)),y=Math.floor((Math.random()*8976));
+    $.get("./adj",function(d){
+      var alines=d.split('\n');
       alines.splice(0,x);
-      var afin = alines.join('\n');
-      $("#a").html(afin.substring(0,afin.indexOf('\n')-1));
+      var afin=alines.join('\n');
+      $("#a").html(afin.substring(0,afin.indexOf('\n')));
     });
-    $.get( "./nouns", function( data ) {
-      var blines = data.split('\n')
+    $.get("./nouns",function(d){
+      var blines=d.split('\n')
       blines.splice(0,y);
-      var bfin = blines.join('\n');
+      var bfin=blines.join('\n');
       $("#b").html(bfin.substring(0,bfin.indexOf('\n')));
     });
   </script>
