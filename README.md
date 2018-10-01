@@ -1,3 +1,9 @@
 # Xbox style username generator
 
-Using adjective and nouns from https://github.com/dariusk/corpora/tree/master/data/words
+Generates an Xbox style username in the form **[Adjective][Noun]** every page load.
+
+Stats:
+ - 81kb on first load
+ - ~120B on each subsequent load
+
+Using adjectives and nouns from [corpora](https://github.com/dariusk/corpora/tree/master/data/words)
