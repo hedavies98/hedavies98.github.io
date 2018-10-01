@@ -8,11 +8,17 @@
 </head>
 <body>
   <script>
+    var x = Math.floor((Math.random() * 906));
+    var y = Math.floor((Math.random() * 8976));
     $.get( "./adj", function( data ) {
-      $("#a").html(data);
+      var alines = data.split('\n');
+      alines.splice(0,x);
+      $("#a").html(alines.join('\n'));
     });
     $.get( "./nouns", function( data ) {
-      $("#b").html(data);
+      var blines = data.split('\n');
+      blines.splice(0,y);
+      $("#b").html(blines.join('\n'));
     });
   </script>
 <h1>Hello World</h1>
