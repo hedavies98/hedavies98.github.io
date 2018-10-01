@@ -17,18 +17,16 @@
       var alines = data.split('\n');
       alines.splice(0,x);
       var afin = alines.join('\n');
-      var afin2 = afin.substring(0,afin.indexOf('\n'));
-      $("#a").html(afin2);
+      $("#a").html(afin.substring(0,afin.indexOf('\n')););
     });
     $.get( "./nouns", function( data ) {
-      var blines = data.split('\n');
-      blines.splice(0,y);
+      var blines = data.split('\n').splice(0,y);
       var bfin = blines.join('\n');
       $("#b").html(bfin.substring(0,bfin.indexOf('\n')));
     });
   </script>
 <h1>Hello World</h1>
-<span id="a"></span>
-<span id="b"></span>
+<span id="a" style="color:pink;"></span>
+<span id="b" style="color:purple;"></span>
 </body>
 </html>
