@@ -5,6 +5,9 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <style>
+    span::first-letter {text-transform:capitalize;}
+  </style>
 </head>
 <body>
   <script>
@@ -15,13 +18,13 @@
       alines.splice(0,x);
       var afin = alines.join('\n');
       var afin2 = afin.substring(0,afin.indexOf('\n'));
-      console.log(afin);
       $("#a").html(afin2);
     });
     $.get( "./nouns", function( data ) {
       var blines = data.split('\n');
       blines.splice(0,y);
-      $("#b").html(blines.join('\n').substring(0,blines.indexOf('\n')));
+      var bfin = alines.join('\n');
+      $("#b").html(bfin.substring(0,bfin.indexOf('\n')));
     });
   </script>
 <h1>Hello World</h1>
