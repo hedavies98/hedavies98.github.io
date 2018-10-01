@@ -7,25 +7,7 @@
   <style>body{overflow:hidden;background:#E4E2DC;}div{width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;}span{text-transform:capitalize;font-family:sans-serif;font-size:10em;}#a{color:rgb(255,36,146);}#b{color:rgb(255,0,255);}</style>
 </head>
 <body>
-  <script>
-    var x=Math.floor((Math.random()*906)),y=Math.floor((Math.random()*8976));
-
-    var request = new XMLHttpRequest();
-    request.open('GET', './a', true);
-    request.onload = function() {
-      var alines=this.response.split('\n');
-      alines.splice(0,x);
-      var afin=alines.join('\n');
-      document.getElementById("a").innerHTML=afin.substring(0,afin.indexOf('\n'));
-    };
-    request.send();
-    $.get("./n",function(d){
-      var blines=d.split('\n')
-      blines.splice(0,y);
-      var bfin=blines.join('\n');
-      document.getElementById("b").innerHTML=bfin.substring(0,bfin.indexOf('\n'));
-    });
-  </script>
+<script>var x=Math.floor(906*Math.random()),y=Math.floor(8976*Math.random()),r=new XMLHttpRequest,q=new XMLHttpRequest;r.open("GET","./a"),r.onload=function(){var n=this.response.split("\n");n.splice(0,x);var e=n.join("\n");document.getElementById("a").innerHTML=e.substring(0,e.indexOf("\n"))},r.send(),q.open("GET","./n"),q.onload=function(){var n=this.response.split("\n");n.splice(0,y);var e=n.join("\n");document.getElementById("b").innerHTML=e.substring(0,e.indexOf("\n"))},q.send();</script>
 <div><span id="a"></span><span id="b"></span></div>
 </body>
 </html>
