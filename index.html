@@ -14,14 +14,14 @@
       var alines = data.split('\n');
       alines.splice(0,x);
       var afin = alines.join('\n');
-      afin = afin.substring(0,indexOf('\n'));
+      afin = afin.substring(0,alines.indexOf('\n'));
       console.log(afin);
       $("#a").html(afin);
     });
     $.get( "./nouns", function( data ) {
       var blines = data.split('\n');
       blines.splice(0,y);
-      $("#b").html(blines.join('\n').substring(0,indexOf('\n')));
+      $("#b").html(blines.join('\n').substring(0,blines.indexOf('\n')));
     });
   </script>
 <h1>Hello World</h1>
