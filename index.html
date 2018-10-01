@@ -1,1 +1,31 @@
-<html><head><script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script><style>body{overflow:hidden;background:#E4E2DC;}div{width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;}span{text-transform:capitalize;font-family:sans-serif;font-size:10em;}#a{color:rgb(255,36,146);}#b{color:rgb(255,0,255);}</style></head><body><script>var x=Math.floor((Math.random()*906)),y=Math.floor((Math.random()*8976));$.get("./a",function(n){var i=n.split("\n");i.splice(0,x);var t=i.join("\n");$("#a").html(t.substring(0,t.indexOf("\n")))});$.get("./n",function(n){var i=n.split("\n");i.splice(0,y);var s=i.join("\n");$("#b").html(s.substring(0,s.indexOf("\n")))});</script><div><span id="a"></span><span id="b"></span>
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <style>body{overflow:hidden;background:#E4E2DC;}div{width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;}span{text-transform:capitalize;font-family:sans-serif;font-size:10em;}#a{color:rgb(255,36,146);}#b{color:rgb(255,0,255);}</style>
+</head>
+<body>
+  <script>
+    var x=Math.floor((Math.random()*906)),y=Math.floor((Math.random()*8976));
+
+    var request = new XMLHttpRequest();
+    request.open('GET', './a', true);
+    request.onload = function() {
+      var alines=this.response.split('\n');
+      alines.splice(0,x);
+      var afin=alines.join('\n');
+      document.getElementById("a").innerHTML=afin.substring(0,afin.indexOf('\n'));
+    };
+    request.send();
+    $.get("./n",function(d){
+      var blines=d.split('\n')
+      blines.splice(0,y);
+      var bfin=blines.join('\n');
+      document.getElementById("b").innerHTML=bfin.substring(0,bfin.indexOf('\n'));
+    });
+  </script>
+<div><span id="a"></span><span id="b"></span></div>
+</body>
+</html>
