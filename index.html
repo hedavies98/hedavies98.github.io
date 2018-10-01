@@ -8,18 +8,15 @@
 </head>
 <body>
   <script>
-    var adj = null;
-    var noun = null;
     $.get( "./adj", function( data ) {
-      adj = data;
+      $("#a").html(data);
     });
     $.get( "./nouns", function( data ) {
-      noun = data;
+      $("#b").html(data);
     });
-
-    $(".result").html(adj+noun);
   </script>
 <h1>Hello World</h1>
-<p class="result"></p>
+<span id="a"></span>
+<span id="b"></span>
 </body>
 </html>
