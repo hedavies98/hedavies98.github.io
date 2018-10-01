@@ -8,10 +8,16 @@
 </head>
 <body>
   <script>
+    var adj = null;
+    var noun = null;
     $.get( "./adj", function( data ) {
-      $( ".result" ).html( data );
-      alert( "Load was performed." );
+      adj = data;
     });
+    $.get( "./nouns", function( data ) {
+      noun = data;
+    });
+
+    $(".result").html(adj+noun);
   </script>
 <h1>Hello World</h1>
 <p class="result"></p>
