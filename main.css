@@ -1,0 +1,22 @@
+html
+{
+	background:#E4E2DC;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	
+}
+
+li,p
+{
+	color:rgb(255,36,146);
+	font-family:sans-serif;
+	line-height: 1.5;
+	font-size: 1.2em;
+}
+
+.album
+{
+	color:rgb(255,0,255);
+	font-weight: bold;
+}
