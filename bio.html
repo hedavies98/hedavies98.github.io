@@ -1,41 +1,56 @@
 <html>
 	<head>
 		 <link rel="stylesheet" type="text/css" href="./main.css">
+		  <script src="main.js"></script> 
+		 <title>My Bio</title>
 	</head>
 	<body>
 		<div id="music">
 			<h1>My music gear</h1>
 			<h2 class="bold">Guitars</h2>
-			<ul>
+			<ul id="guitars" class="hidden">
 			  <li>Squier Classic Vibe 60s Stratocaster</li>
 			  <li>Fender Player Malibu</li>
 			</ul>
 			<h2 class="bold">Amps</h2>
-			<ul>
+			<ul id="amps" class="hidden">
 			  <li>Fender Champion 40</li>
+			  <li>Marshall MG15CDR</li>
 			  <li>Blackstar Fly 3</li>
 			  <li>LM386 Amp</li>
 			</ul>
 			<h2 class="bold">Pedals</h2>
 			<p class="bold">Non-DIY</p>
-			<ul>
+			<ul id="non-diy" class="hidden">
+			  <li>Boss - BD-2 Blues Driver</li>
 			  <li>TC Electronic - Ditto Looper</li>
 			  <li>TC Electronic - Dark Matter Distortion</li>
 			  <li>TC Electronic - Thunderstorm Flanger</li>
 			  <li>EHX - Canyon Delay</li>
 			  <li>Jim Dunlop - Cry Baby Wah (Vintage [July 14th, 1988]/Modded)</li>
+			  <li>Kmise - Analog Chorus</li>
 			</ul>
 			<p class="bold">DIY</p>
-			<ul>
+			<ul id="diy" class="hidden">
 			  <li>Bazz Fuss</li>
 			  <li>Acapulco Gold</li>
 			  <li>LofoMofo</li>
 			  <li>Green Ringer</li>
 			  <li>LPB-1</li>
 			  <li>Bearhug FET Compressor</li>
-			</ul>	
+			  <li>'20 Standard Reverb</li>
+			  <li>Big Muff Pi (Modded)</li>
+			  <li>Bigger Muff</li>
+			  <li>Buffoon Buffer</li>
+			  <li>Arachnid FV-1 MultiFX</li>
+			</ul>
+			<h2 class="bold">Rack Units</h2>
+			<ul id="rack" class="hidden">
+			  <li>Peavey Q215 15-band stereo EQ</li>
+			  <li>Boss RV-1000 reverb (broken)</li>
+			</ul>			
 			<h2 class="bold">Other</h2>
-			<ul>
+			<ul id="other" class="hidden">
 			  <li>Ukulele</li>
 			  <li>Ocarina (3D Printed)</li>
 			  <li>Harmonica</li>
@@ -45,7 +60,7 @@
 		</div>
 		<div id="PC">
 			<h1>My PC Specs</h1>
-			<ul>
+			<ul id="specs">
 			  <li><span class="bold">CPU </span>Intel Core i5-2500k</li>
 			  <li><span class="bold">GPU </span>EVGA Geforce GTX 1080 SC</li>
 			  <li><span class="bold">Motherboard </span>Asus P8Z77-V LX</li>
@@ -57,7 +72,7 @@
 			  <li><span class="bold">Case </span>EZCool A200D</li>
 			</ul>
 		</div>
-		<div>
+		<div id="albums">
 			<h1>Project Image Albums</h1>
 			<p class="bold"><small>Click an image then the `i` icon to see a description</small></p>
 			<a href="https://photos.app.goo.gl/aSaAwQC9DYGwNDaC8"><p>My DIY Guitar pedals</p></a>

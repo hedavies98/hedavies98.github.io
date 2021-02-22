@@ -42,3 +42,8 @@ h2
 	color:rgb(255,0,255);
 	font-weight: bold;
 }
+
+.hidden
+{
+	display: none;
+}
