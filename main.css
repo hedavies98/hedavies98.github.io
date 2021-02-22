@@ -23,6 +23,13 @@ li,p,h1,h2
 	line-height: 1.5;
 	font-size: 1.2em;
 }
+
+ul
+{
+	height:auto;
+	transition: opacity 0.5s ease-in;
+}
+
 ul,p,h1,h2
 {
 	margin-bottom: -3%;
@@ -37,6 +44,13 @@ h2
 	font-size: 2em;
 }
 
+a h2, a p
+{
+	text-decoration: underline;	
+	text-decoration-color: rgb(255,36,146);
+	cursor: pointer;
+}
+
 .bold
 {
 	color:rgb(255,0,255);
@@ -45,5 +59,7 @@ h2
 
 .hidden
 {
-	display: none;
+	height:0;
+	opacity: 0;
+	overflow: hidden;
 }
