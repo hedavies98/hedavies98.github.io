@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bass Guitar Note Picker</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Comfortaa&family=Noto+Music">
+
+  <style>
+    html, body {
+      font-family: sans-serif;
+      background-color: #EEE;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: calc(15px + 0.390625vw);
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 70vw;
+      /* Center child horizontally*/
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    p {
+      font-family: "Noto Music", sans-serif;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #note, #string {
+      color: rebeccapurple;
+    }
+
+    #random {
+      border: 0;
+      background-color: rebeccapurple;
+      color: white;
+      font-family: "Comfortaa";
+      font-size: 1.5rem;
+      padding: 0.25em;
+      border-radius: 0.25em 1em;
+    }
+    #random:hover {
+      background-color: purple;
+      cursor: pointer;
+    }
+
+    .crossed {
+      text-decoration: red wavy line-through;
+
+    }
+
+    h1 {
+      font-family: "Permanent Marker", cursive;
+      font-size: 3rem;
+      color: rebeccapurple;
+    }
+  </style>
+  <script type="text/javascript">
+    var instrument = 4;
+
+    function toggleInstrument() {
+      if (instrument == 4) {
+        instrument = 6;
+        document.getElementById("instrument").classList.add("crossed");
+      } else {
+        instrument = 4;
+        document.getElementById("instrument").classList.remove("crossed");
+      }
+    }
+    function randomise() {
+      var notes = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B", "C♭"];
+      document.getElementById("note").innerHTML = notes[Math.floor(Math.random() * notes.length)];
+      document.getElementById("string").innerHTML = Math.floor(Math.random() * instrument)+1;
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1><span id="instrument" class="" onclick="toggleInstrument()">Bass</span> Guitar Note Picker</h1>
+      <p>
+        <span>Play&nbsp;</span>
+        <span id="note">A</span>
+        <span>&nbsp;on string&nbsp;</span>
+        <span id="string">1</span>
+      </p>
+      <button id="random" onclick="randomise()">New Note</button>
+    </div>  
+  </div>
+  
+  </body>
+</html>
