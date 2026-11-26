@@ -29,8 +29,7 @@ ul
 	transition: opacity 0.5s ease-in;
 }
 
-ul,h1,h2
-{
+ul,h1{
 	margin-bottom: -3%;
 }
 h1
