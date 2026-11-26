@@ -4,7 +4,6 @@ html
 	display:flex;
 	align-items:center;
 	justify-content:center;
-	
 }
 
 body
@@ -14,13 +13,13 @@ body
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: flex-start;
+	color:rgb(255,36,146);
+	font-family:sans-serif;
+	line-height: 1.5;
 }
 
 li,p,h1,h2
 {
-	color:rgb(255,36,146);
-	font-family:sans-serif;
-	line-height: 1.5;
 	font-size: 1.2em;
 }
 
@@ -32,7 +31,7 @@ ul
 
 ul,p,h1,h2
 {
-	margin-bottom: -3%;
+	/* margin-bottom: -3%; */
 }
 h1
 {
@@ -62,4 +61,31 @@ a h2, a p
 	height:0;
 	opacity: 0;
 	overflow: hidden;
+}
+
+.excel-table {
+	border-collapse: collapse;
+}
+
+.excel-table th {
+	color: rgb(255,0,255);
+	padding: 12px;
+	text-align: left;
+	border: 1px solid rgb(255,36,146);
+	background-color: rgba(255, 36, 145, 0.301);
+}
+
+.excel-table td {
+	padding: 10px;
+	border: 1px solid rgb(255,36,146);
+}
+
+.excel-table tr:nth-child(even) {
+	background-color: #dddbd5;
+}
+
+.excel-table td:first-child {
+    /* font-weight: bo?ld; */
+	color: rgb(255,0,255);
+	
 }
